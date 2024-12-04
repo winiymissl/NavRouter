@@ -10,3 +10,9 @@
 获取项目名字和navigaiton文件夹中
 的导航图名字，后续Route注解中的参
 数就是从这里获取的，参数可用常量
+
+核心使用navigation的id做为跳转依据
+
+最终跳转到navigation界面的时候要
+跳转到对应的fragment，所以需要在
+对应的activity中再一次跳转
