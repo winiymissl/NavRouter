@@ -1,0 +1,12 @@
+//        javaCompileOptions {
+//            annotationProcessorOptions {
+//                arguments = [
+//                        ROUTER_MODULE_NAME      : project.getName(),
+//                        ROUTER_MODULE_GRAPH_NAME: "login_graph"
+//                ]
+//            }
+//        }
+在buidl.gralde中添加如上代码，
+获取项目名字和navigaiton文件夹中
+的导航图名字，后续Route注解中的参
+数就是从这里获取的，参数可用常量

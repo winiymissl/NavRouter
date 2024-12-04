@@ -1,0 +1,23 @@
+plugins {
+    id 'java-library'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+ext {
+    ARTIFACT = 'compiler'
+    GROUP = 'com.example.lib_compiler'
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //注解处理器
+    implementation 'com.squareup:javapoet:1.13.0'
+
+    annotationProcessor 'com.google.auto.service:auto-service:1.1.1'
+    compileOnly 'com.google.auto.service:auto-service-annotations:1.1.1'
+
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+    api(project(':lib_annotation'))
+}
